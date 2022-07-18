@@ -1,0 +1,6 @@
+use todolistdb
+db.createCollection('todolists');
+
+db.todolists.insert({title: 'Creación APP', description: 'Creación de aplicación: FrontEnd & BackEnd', creator: 'Johan Legarda Lopez', state: 'Completada'});
+
+db.todolists.insert({title: 'Creación de DB', description: 'Creación de base de datos noSQL', creator: 'Tomas Morales', state: 'Pendiente'});

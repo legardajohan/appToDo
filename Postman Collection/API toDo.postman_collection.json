@@ -1,0 +1,122 @@
+{
+	"info": {
+		"_postman_id": "e8423c12-9331-4688-b37f-ffbf48064666",
+		"name": "API toDo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20066270"
+	},
+	"item": [
+		{
+			"name": "Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Creando la DB\",\r\n    \"description\": \"Creación de la base de datos con MongoDB\",\r\n    \"creator\": \"Johan Legarda Lopez\",\r\n    \"state\": \"Completada\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "isadmin",
+						"value": "true",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8000/title/Creación APP",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"title",
+						"Creación APP"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update:  /title/:newTitle",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "/Creación APP/Application",
+					"path": [
+						"Creación APP",
+						"Application"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete /title/:title",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/title/Creando la DB",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"title",
+						"Creando la DB"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
