@@ -1,0 +1,22 @@
+<div class="col-auto mb-2">
+    <h5><strong>{{ toDo.title }}</strong></h5>
+</div>
+<div class="col mb-2">
+    <img src="../../assets/img/description.svg" alt="" width="12px"> {{ toDo.description }}
+</div> 
+<div class="col mb-2">
+    <img src="../../assets/img/person.svg" alt="" width="12px"> {{ toDo.creator }}
+</div>
+<div class="col mb-2">
+    <img src="../../assets/img/check.svg" alt="" width="12px"> {{ toDo.state }}
+</div>
+<div class="d-flex flex-row-reverse">
+    <button 
+        type="submit"
+        class="btn btn-outline-success btn-sm" 
+        [routerLink]="['/toDoList', index]"
+        [queryParams]="{edition: '1'}"
+    >
+        Editar
+    </button>
+</div>

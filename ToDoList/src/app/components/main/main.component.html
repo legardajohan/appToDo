@@ -1,0 +1,16 @@
+<div style="text-align: center;">
+    <button class="btn btn-success mt-2" style="cursor: pointer;" (click)="addToDo()">Agregar nueva tarea +</button>
+</div>
+
+<div class="row justify-content-center">
+    <div class="col-3 shadow m-3 p-3" *ngFor="let element of toDoList; let i = index"
+        style="border-radius: 15px;">
+        <app-to-do 
+            [toDo]="element" 
+            [index]="i">
+        </app-to-do>
+    </div>
+</div>
+
+<router-outlet></router-outlet>
+
