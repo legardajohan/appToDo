@@ -17,6 +17,7 @@ export class FormComponent {
 
   index!: number;
   edition!: number;
+  actionTitle: string = 'Agregar tarea';
 
   constructor(private toDoService: ToDoService,
     private router: Router,
@@ -28,6 +29,7 @@ export class FormComponent {
 
     if (this.edition != null && this.edition === 1) {
       let toDo: toDoInterface = this.toDoService.findToDO(this.index);
+      this.actionTitle = 'Actualizar';
       this.titleInput = toDo.title;
       this.descriptionInput = toDo.description;
       this.creatorInput = toDo.creator;

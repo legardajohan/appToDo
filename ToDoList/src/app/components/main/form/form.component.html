@@ -1,7 +1,7 @@
 <div class="row justify-content-center">
     <div class="text-center col-4 shadow m-4 p-3" style="border-radius: 20px;">
-        <h2 class="mb-4 mt-4">Agregar tarea</h2>
         <form action="" class="form" #f="ngForm" (ngSubmit)="f.form.valid && saveToDo()">
+            <h2 class="mb-4 mt-4">{{ actionTitle }}</h2>
             <div class="form-group m-2">
                 <input [(ngModel)]="titleInput" type="text" name="title" class="form-control" placeholder="Título" required>
             </div>
@@ -14,7 +14,7 @@
             <div class="form-group m-2">
                 <select class="form-select" name="states" [(ngModel)]="stateInput">
                     <option value="Pendiente">Pendiente</option>
-                    <option value="Completado">Completado</option>
+                    <option value="Completada">Completado</option>
                 </select>
             </div>
             <div class="form-group m-2 d-grid gap-2">
