@@ -54,12 +54,8 @@ export class FormComponent {
 
   }
 
-  deleteToDo() {
-    if (this.index != null) {
-      this.toDoService.deleteToDo(this.index);
-    }
+  cancel() {
     this.router.navigate(['/toDoList']);
   }
-
 
 }

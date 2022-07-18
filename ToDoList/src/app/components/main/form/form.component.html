@@ -18,10 +18,10 @@
                 </select>
             </div>
             <div class="form-group m-2 d-grid gap-2">
-                <button type="submit" class="btn btn-success">Agregar</button>
+                <button type="submit" class="btn btn-success">{{ actionTitle }}</button>
             </div>
             <div class="form-group m-2 d-grid gap-2">
-                <button *ngIf="index !=null" type="submit" class="btn btn-outline-danger" (click)="deleteToDo()">Eliminar</button>
+                <button *ngIf="index !=null" type="submit" class="btn btn-outline-danger" (click)="cancel()">Cancelar</button>
             </div>
         </form>
     </div>

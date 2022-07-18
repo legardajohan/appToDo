@@ -17,4 +17,10 @@ export class ToDoComponent implements OnInit {
     console.log(this.toDo.title);
   }
 
+  deleteToDo() {
+    if (this.index != null) {
+      this.toDoService.deleteToDo(this.index);
+    }
+  }
+  
 }

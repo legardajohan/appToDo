@@ -12,11 +12,19 @@
 </div>
 <div class="d-flex flex-row-reverse">
     <button 
+        type="submit" 
+        class="btn btn-outline-danger btn-sm m-1" 
+        (click)="deleteToDo()"
+    >
+        Eliminar
+    </button>
+    <span></span>
+    <button 
         type="submit"
-        class="btn btn-outline-success btn-sm" 
+        class="btn btn-outline-success btn-sm m-1" 
         [routerLink]="['/toDoList', index]"
         [queryParams]="{edition: '1'}"
     >
-        Editar
+        Editar        
     </button>
 </div>
